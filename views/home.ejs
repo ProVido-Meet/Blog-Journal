@@ -1,0 +1,37 @@
+<%- include("partials/header"); -%>
+
+    <center>
+        <h1>Home</h1>
+    </center>
+    <p>
+        <%= startingContent %>
+    </p>
+
+    <div class="container all-posts">
+        <%  posts.forEach(function(post){ %>
+            <div class="post-div">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div style="background-image: url('<%= post.image %>');" class="thumbnail"></div>
+                        <p class="text-muted">Author:
+                            <%= post.author %>
+                        </p>
+                    </div>
+                    <div class="col-lg-6">
+                        <h1>
+                            <%=post.title%>
+                        </h1>
+                        <hr class="title-header">
+                        <p>
+                            <%=post.content.substring(0, 150) + " ..."%>
+                                <a class="text-read-more" href="/posts/<%=post._id%>">Read More</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <% }) %>
+    </div>
+
+
+    <%- include("partials/footer"); -%>
