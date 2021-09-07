@@ -3,15 +3,15 @@
     <form class="" action="/compose" method="post">
         <div class="form-group">
             <label>Title</label>
-            <input class="form-control" type="text" name="postTitle">
+            <input class="form-control" type="text" name="postTitle" required>
             <label>Author Name</label>
-            <input class="form-control" type="text" name="authorName">
+            <input class="form-control" type="text" name="authorName" required>
             <label>Image URL</label>
             <input type="text" name="imageURL" class="form-control">
             <label>Post</label>
-            <textarea class="form-control" name="postBody" rows="5" cols="30"></textarea>
+            <textarea class="form-control" name="postBody" rows="5" cols="30" required></textarea>
         </div>
-        <button class="btn btn-primary" type="submit" name="button">Publish</button>
+        <button class="btn btn-primary" type="submit" name="button">Publish or Post</button>
         <a href="/" class="btn btn-danger">Back</a>
     </form>
     <%- include("partials/footer"); -%>

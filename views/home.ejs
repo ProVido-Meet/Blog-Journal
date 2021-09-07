@@ -5,6 +5,7 @@
     </center>
     <p>
         <%= startingContent %>
+            <a href="/compose" class="btn btn-primary">Compose</a>
     </p>
 
     <div class="container all-posts">
@@ -13,19 +14,20 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div style="background-image: url('<%= post.image %>');" class="thumbnail"></div>
-                        <p class="text-muted">Author:
+                        <p class="text-muted" style="font-family: 'Besley', serif;">Author:
                             <%= post.author %>
                         </p>
                     </div>
                     <div class="col-lg-6">
-                        <h1>
+                        <h1 style="font-family: 'Besley', serif;">
                             <%=post.title%>
                         </h1>
                         <hr class="title-header">
-                        <p>
+                        <p style="font-family: 'Besley', serif;">
                             <%=post.content.substring(0, 150) + " ..."%>
                                 <a class="text-read-more" href="/posts/<%=post._id%>">Read More</a>
                         </p>
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
                 </div>
             </div>

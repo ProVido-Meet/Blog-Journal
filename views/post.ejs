@@ -1,16 +1,20 @@
 <%- include("partials/header"); -%>
 
-
-    <h1>
-        <%=title%>
-            &nbsp;&nbsp;
-            <span>Author: <%= author %> </span>
-    </h1>
-    <img src="<%= image %>" width="50%" height="60%" alt="Image">
-    <p>
-        <%=content%>
-    </p>
-
-
+    <div class="container post-contain">
+        <center>
+            <h1 style="font-family: 'Besley', serif;">
+                <%=title%>
+                    &nbsp;&nbsp;
+            </h1>
+            <span class="text-muted" id="authorName">Author: <%= author %> </span>
+        </center>
+        <hr>
+        <br><br>
+        <img src="<%= image %>" class="img-responsive" width="40%" height="40%" alt="Image">
+        <br>
+        <p class="content-p">
+            <%=content%>
+        </p>
+    </div>
 
     <%- include("partials/footer"); -%>

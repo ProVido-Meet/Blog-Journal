@@ -1,24 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Besley&family=Montserrat:wght@300&display=swap');
 html {
     min-height: 100%;
     position: relative;
 }
 
+body {
+    background-color: #F8F8F8;
+}
+
 .navbar {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding: 5px;
     border: 0;
     border-radius: 0;
     margin-bottom: 0;
     font-size: 12px;
     letter-spacing: 5px;
+    background-color: #C9CCD5;
 }
 
 .navbar-nav li a {
     font-weight: 600;
+    color: #39A2DB;
 }
 
 .navbar-nav li a:hover {
     color: #1abc9c !important;
+    border-radius: 10px;
 }
 
 .footer-padding {
@@ -36,7 +44,7 @@ html {
 
 .footer p {
     margin-top: 25px;
-    font-size: 12px;
+    font-size: 16px;
     color: #fff;
 }
 
@@ -47,6 +55,7 @@ html {
 .post-div {
     padding: 10px;
     border-radius: 10px;
+    background-color: #ffffff;
     border: 1px solid rgb(185, 185, 185);
 }
 
@@ -67,7 +76,27 @@ html {
 }
 
 .thumbnail {
-    width: 40%;
+    width: 50%;
     height: 150px;
     border-radius: 5px;
+}
+
+#authorName {
+    font-size: 14px;
+    font-family: 'Besley', serif;
+}
+
+.img-responsive {
+    border-radius: 5px;
+}
+
+.post-contain {
+    padding: 15px;
+    background-color: #ffffff;
+}
+
+.content-p {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
 }

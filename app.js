@@ -6,8 +6,8 @@ const ejs = require("ejs");
 const mongoose = require('mongoose');
 
 const homeStartingContent = "Your posts shown below. Or compose a post.";
-const aboutContent = "Developed by GYANAM";
-const contactContent = "Contact email adress is ggyanam869@gmail.com";
+const aboutContent = "Developed by GYANAM. This is Blog Post Social Media.";
+const contactContent = "Contact email address is ";
 
 const app = express();
 app.set('view engine', 'ejs');
@@ -31,13 +31,14 @@ app.get("/", function(req, res) {
     Post.find({}, function(err, posts) {
         res.render("home", {
             startingContent: homeStartingContent,
-            posts: posts
+            posts: posts,
+            year: new Date().getFullYear()
         });
     });
 });
 
 app.get("/compose", function(req, res) {
-    res.render("compose");
+    res.render("compose", { year: new Date().getFullYear() });
 });
 
 app.post("/compose", function(req, res) {
@@ -65,18 +66,23 @@ app.get("/posts/:postId", function(req, res) {
             title: post.title,
             author: post.author,
             image: post.image,
-            content: post.content
+            content: post.content,
+            year: new Date().getFullYear()
         });
     });
 
 });
 
 app.get("/about", function(req, res) {
-    res.render("about", { aboutContent: aboutContent });
+    res.render("about", { aboutContent: aboutContent, year: new Date().getFullYear() });
 });
 
 app.get("/contact", function(req, res) {
-    res.render("contact", { contactContent: contactContent });
+    res.render("contact", { contactContent: contactContent, year: new Date().getFullYear() });
+});
+
+app.use(function(req, res) {
+    res.status(404).render('404');
 });
 
 
