@@ -67,6 +67,7 @@ app.get("/posts/:postId", function(req, res) {
             author: post.author,
             image: post.image,
             content: post.content,
+            id: post._id,
             year: new Date().getFullYear()
         });
     });
@@ -79,6 +80,10 @@ app.get("/about", function(req, res) {
 
 app.get("/contact", function(req, res) {
     res.render("contact", { contactContent: contactContent, year: new Date().getFullYear() });
+});
+
+app.get("/news", (req, res) => {
+    res.render("news", { year: new Date().getFullYear() });
 });
 
 app.use(function(req, res) {

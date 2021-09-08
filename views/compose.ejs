@@ -1,17 +1,48 @@
 <%- include("partials/header"); -%>
+    <div class="alert alert-primary alert-dismissible fade show" role="alert">
+        <strong>NEW!</strong> We added new pages here check it out.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
     <h1>Compose</h1>
     <form class="" action="/compose" method="post">
         <div class="form-group">
             <label>Title</label>
-            <input class="form-control" type="text" name="postTitle" required>
+            <input class="form-control" type="text" name="postTitle" placeholder="Title" required>
             <label>Author Name</label>
-            <input class="form-control" type="text" name="authorName" required>
+            <input class="form-control" type="text" name="authorName" placeholder="Author name" required>
+            <!-- <div class="row">
+                <div class="col-lg-3">
+                    <label>Author Name</label>
+                    <input class="form-control" type="text" name="authorName" placeholder="Author name" required>
+                </div>
+                <div class="col-lg-3">
+                    <label>Profile Image URL</label>
+                    <input class="form-control" type="text" name="profile" placeholder="Profile image URL" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <label>1 Image URL</label>
+                    <input type="text" name="imageURL" class="form-control">
+                </div>
+                <div class="col-lg-3">
+                    <label>2 Image URL</label>
+                    <input type="text" name="2imageURL" class="form-control">
+                </div>
+            </div> -->
             <label>Image URL</label>
-            <input type="text" name="imageURL" class="form-control">
+            <input type="text" name="imageURL" class="form-control" placeholder="Image URL">
             <label>Post</label>
-            <textarea class="form-control" name="postBody" rows="5" cols="30" required></textarea>
+            <textarea class="form-control" name="postBody" rows="5" cols="30" placeholder="Captions" required></textarea>
         </div>
-        <button class="btn btn-primary" type="submit" name="button">Publish or Post</button>
-        <a href="/" class="btn btn-danger">Back</a>
+        <div class="mt-2">
+            <button class="btn btn-primary" type="submit" name="button">Publish or Post</button>
+            <a href="/" class="btn btn-danger">Back</a>
+        </div>
+        <div class="text-muted">
+            <p>If you don't have an Idea of Blog Post. You can choose an Idea from <a href="https://blog.hubspot.com/sales/famous-quotes" target="_blank" rel="noopener noreferrer">here</a>.</p>
+            <p>We recommeded use <a href="https://unsplash.com" target="_blank">unsplash.com</a> images.</p>
+        </div>
     </form>
     <%- include("partials/footer"); -%>
