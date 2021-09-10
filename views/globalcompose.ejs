@@ -1,0 +1,39 @@
+<%- include("partials/header") -%>
+    <center>
+        <h3 style="font-family: 'Montserrat', sans-serif;">Global Chat Coming Soon</h3>
+        <div class="coming-soon-div">
+            <p style="font-size: 25px;font-weight: 600;" class="text-success" id="demo"></p>
+            <button id="g-chat" class="btn btn-primary disabled">Register Now 
+                <img width="30" height="30" src="https://img.icons8.com/color-glass/48/000000/social-network.png" alt="Logo" class="img-fluid">
+            </button>
+            <p class="text-muted">Registration open on 15 September
+                <%= year %>
+            </p>
+            <h5 class="text-primary">Support? support@dailyjournal.com</h5>
+        </div>
+    </center>
+    <script>
+        var countDownDate = new Date("2 Oct, 2021 15:37:25").getTime();
+
+        var x = setInterval(function() {
+
+            var now = new Date().getTime();
+
+            var distance = countDownDate - now;
+
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("demo").innerHTML = days + "d " + hours + "h " +
+                minutes + "m " + seconds + "s ";
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+
+    <%- include("partials/footer") -%>

@@ -20,12 +20,14 @@ body {
 }
 
 .navbar-nav li a {
+    padding: 5px;
     font-weight: 600;
     color: #39A2DB;
 }
 
 .navbar-nav li a:hover {
     color: #1abc9c !important;
+    background-color: #ffffff !important;
     border-radius: 10px;
 }
 
@@ -71,14 +73,14 @@ body {
     text-decoration: none !important;
 }
 
-.thumbnail {
-    width: 50%;
+.img-thumbnail {
+    width: 60%;
     height: 150px;
     border-radius: 5px;
 }
 
 #authorName {
-    font-size: 14px;
+    font-size: 18px;
     font-family: 'Besley', serif;
 }
 
@@ -88,6 +90,7 @@ body {
 
 .post-contain {
     padding: 15px;
+    border-radius: 10px;
     background-color: #ffffff;
 }
 
@@ -119,4 +122,18 @@ body {
 
 .compose-a-post a:hover {
     color: grey;
+}
+
+.coming-soon-div {
+    width: 60%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+#g-chat {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: not-allowed;
 }

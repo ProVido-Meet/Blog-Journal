@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const mongoose = require('mongoose');
 
-const homeStartingContent = "Your posts shown below. Or compose a post.";
+const homeStartingContent = "Your posts shown below.";
 const aboutContent = "Developed by GYANAM. This is Blog Post Social Media.";
 const contactContent = "Contact email address is ";
 
@@ -85,6 +85,10 @@ app.get("/contact", function(req, res) {
 app.get("/news", (req, res) => {
     res.render("news", { year: new Date().getFullYear() });
 });
+
+app.get("/new/global-chat/", (req, res) => {
+    res.render('globalcompose', { year: new Date().getFullYear() });
+})
 
 app.use(function(req, res) {
     res.status(404).render('404');
