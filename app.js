@@ -15,11 +15,13 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb+srv://gyanam-admin:Gyanam@dailyjournal.aewl0.mongodb.net/blogDB", { useNewUrlParser: true });
+mongoose.connect("mongodb://localhost:27017/blogDB", { useNewUrlParser: true });
 
 const postSchema = {
     title: String,
+    subtitle: String,
     author: String,
+    banner: String,
     image: String,
     content: String
 };
@@ -44,7 +46,9 @@ app.get("/compose", function(req, res) {
 app.post("/compose", function(req, res) {
     const post = new Post({
         title: req.body.postTitle,
+        subtitle: req.body.postSub,
         author: req.body.authorName,
+        banner: req.body.banner,
         image: req.body.imageURL,
         content: req.body.postBody
     });
@@ -64,7 +68,9 @@ app.get("/posts/:postId", function(req, res) {
     Post.findOne({ _id: requestedPostId }, function(err, post) {
         res.render("post", {
             title: post.title,
+            subtitle: post.subtitle,
             author: post.author,
+            banner: post.banner,
             image: post.image,
             content: post.content,
             id: post._id,
@@ -86,7 +92,7 @@ app.get("/news", (req, res) => {
     res.render("news", { year: new Date().getFullYear() });
 });
 
-app.get("/new/global-chat/", (req, res) => {
+app.get("/courses/all/", (req, res) => {
     res.render('globalcompose', { year: new Date().getFullYear() });
 })
 

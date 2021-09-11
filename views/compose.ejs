@@ -1,16 +1,16 @@
 <%- include("partials/header"); -%>
-    <div class="alert alert-primary alert-dismissible fade show" role="alert">
-        <strong>NEW!</strong> We added new pages here check it out.
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
 
     <h1>Compose</h1>
     <form class="" action="/compose" method="post">
         <div class="form-group">
             <label>Title</label>
             <input class="form-control" type="text" name="postTitle" placeholder="Title" required>
+            <label>Subtitle</label>
+            <input class="form-control" type="text" name="postSub" placeholder="Subtitle" required>
             <label>Author Name</label>
             <input class="form-control" type="text" name="authorName" placeholder="Author name" required>
+            <label>Banner</label>
+            <input type="text" name="banner" class="form-control" placeholder="Banner image URL">
             <label>Image URL (You can use random images copy this link https://source.unsplash.com/random)</label>
             <input type="text" name="imageURL" class="form-control" placeholder="Image URL">
             <label>Post</label>
