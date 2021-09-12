@@ -2,10 +2,11 @@
     <center>
         <h3 style="font-family: 'Montserrat', sans-serif;">Learn NodeJS in one video meeting.</h3>
         <div class="coming-soon-div">
-            <p style="font-size: 25px;font-weight: 600;" class="text-success" id="demo">Meeting start on 14 September
-                <%= year %>
-            </p>
-            <button title="Meeting button is disable. It will be open on 14 Sept 2021" id="g-chat" onclick="meet();" class="btn btn-primary disabled">Enter Meeting
+            <p style="font-size: 25px;font-weight: 600;" class="text-success" id="demo"></p>
+            <button title="It will be open on 14 Sept 2021" id="g-chat-2" onclick="meet();" class="btn btn-primary disabled">Enter Meeting
+                <img width="30" height="30" src="https://img.icons8.com/color-glass/48/000000/social-network.png" alt="Logo" class="img-fluid">
+            </button>
+            <button title="It will be open on 14 Sept 2021" id="g-chat" onclick="meet();" class="btn btn-primary">Enter Meeting
                 <img width="30" height="30" src="https://img.icons8.com/color-glass/48/000000/social-network.png" alt="Logo" class="img-fluid">
             </button>
             <p class="text-muted">Only limited seats
@@ -15,12 +16,7 @@
         </div>
     </center>
     <script>
-        function meet() {
-            window.open('');
-        }
-    </script>
-    <!-- <script>
-        var countDownDate = new Date("2 Oct, 2021 15:37:25").getTime();
+        var countDownDate = new Date("14 Sept, 2021 15:37:25").getTime();
 
         var x = setInterval(function() {
 
@@ -38,9 +34,14 @@
 
             if (distance < 0) {
                 clearInterval(x);
-                document.getElementById("demo").innerHTML = "EXPIRED";
+                document.getElementById("g-chat-2").style.display = "none";
+                document.getElementById("g-chat").style.display = "block";
             }
         }, 1000);
-    </script> -->
+
+        function meet() {
+            window.open('https://meet.google.com/zqp-ueta-way');
+        }
+    </script>
 
     <%- include("partials/footer") -%>

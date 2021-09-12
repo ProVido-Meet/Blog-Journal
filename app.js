@@ -21,6 +21,7 @@ const postSchema = {
     title: String,
     subtitle: String,
     author: String,
+    profile: String,
     banner: String,
     image: String,
     content: String
@@ -48,6 +49,7 @@ app.post("/compose", function(req, res) {
         title: req.body.postTitle,
         subtitle: req.body.postSub,
         author: req.body.authorName,
+        profile: req.body.profile,
         banner: req.body.banner,
         image: req.body.imageURL,
         content: req.body.postBody
@@ -70,6 +72,7 @@ app.get("/posts/:postId", function(req, res) {
             title: post.title,
             subtitle: post.subtitle,
             author: post.author,
+            profile: post.profile,
             banner: post.banner,
             image: post.image,
             content: post.content,

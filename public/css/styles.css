@@ -73,10 +73,41 @@ body {
     text-decoration: none !important;
 }
 
-.img-thumbnail {
+
+/* .img-thumbnail {
     width: 60%;
     height: 150px;
     border-radius: 5px;
+} */
+
+.img__wrap {
+    position: relative;
+    height: 150px;
+    width: 60%;
+    border-radius: 5px;
+}
+
+.img__description {
+    position: absolute;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    height: 150px;
+    width: 100%;
+    background: rgba(204, 204, 204, 0.72);
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .2s, visibility .2s;
+}
+
+.img__description p {
+    margin-top: 50px;
+}
+
+.img__wrap:hover .img__description {
+    visibility: visible;
+    opacity: 1;
 }
 
 #authorName {
@@ -135,7 +166,14 @@ body {
     color: #fff;
     font-size: 20px;
     font-weight: 500;
-    cursor: not-allowed;
+    display: none;
+    /* cursor: not-allowed; */
+}
+
+#g-chat-2 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
 }
 
 .banner-img {
@@ -143,5 +181,16 @@ body {
     height: 300px;
     padding: 10px;
     border-radius: 5px;
-    color: #fff;
+    color: rgb(228, 228, 228);
+    background-size: cover;
+    background-position: center;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }

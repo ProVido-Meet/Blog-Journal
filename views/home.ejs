@@ -17,7 +17,13 @@
             <div class="post-div">
                 <div class="row">
                     <div class="col-lg-6">
-                        <div style="background-image: url('<%= post.image %>');" class="img-fluid img-thumbnail"></div>
+                        <div style="background-image: url('<%= post.image %>');" class="img-fluid img__wrap">
+                            <a href="/posts/<%=post._id%>">
+                                <div class="img__description">
+                                    <p>VIEW</p>
+                                </div>
+                            </a>
+                        </div>
                         <span class="text-muted" id="authorName">Posted by 
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
                                 <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
