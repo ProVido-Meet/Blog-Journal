@@ -85,6 +85,8 @@ body {
     height: 150px;
     width: 60%;
     border-radius: 5px;
+    background-size: cover;
+    background-position: center;
 }
 
 .img__description {
@@ -94,7 +96,7 @@ body {
     border-radius: 5px;
     height: 150px;
     width: 100%;
-    background: rgba(204, 204, 204, 0.72);
+    background: rgba(230, 245, 255, 0.72);
     color: #fff;
     visibility: hidden;
     opacity: 0;
@@ -136,6 +138,10 @@ body {
     padding: 15px;
     border-radius: 10px;
     background-color: #ffffff;
+}
+
+.go-to-post:hover {
+    transform: scale(1.1);
 }
 
 .compose-a-post {
